@@ -1,0 +1,450 @@
+/*1. GENERAL STYLING*/
+/*Removes default browser spacing*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Styles the whole page*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f7f8fa;
+}
+
+/*Keeps conetent centered*/
+.hotel-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Adds space around each section*/
+.hotel-section{
+    padding: 70px 0;
+}
+
+/*2. HEADER AND NAVIGATION*/
+.hotel-header{
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.hotel-header .hotel-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.hotel-logo{
+    color: #263238;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hotel-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hotel-nav a{
+    color: #263238;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/*Change link colour when the mouse moves over it*/
+.hotel-nav a:hover{
+     color: #d4a017;
+}
+
+/*3. HOTEL SECTION*/
+.hotel-hero{
+    min-height: 450px;
+    padding: 60px 20px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hotel-hero-content{
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hotel-hero h1{
+    font-size: clamp(32px, 5vw, 55px);
+    margin: 15px 0;
+}
+
+.hotel-hero p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hotel-subtitle{
+    color: #d4a017;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*4.BUTTON*/
+.hotel-button{
+    display: inline-block;
+    background-color: #d4a017;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hotel-button:hover{
+    background-color: #a87900;
+    transform: translateY(-3px);
+}
+
+/*5. ABOUT SECTION*/
+.hotel-about{
+    max-width: 850px;
+    text-align: center;
+}
+
+.hotel-about h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/*6. SECTION HEADING*/
+.hotel-section-heading{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hotel-section-heading h2 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.hotel-section-heading > p:last-child{
+    color: #666666;
+}
+
+/*7. ROOM CARD*/
+.room-section{
+    background-color: #ffffff;
+}
+
+.room-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.room-card{
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Lifts the card slightly when hovered over*/
+.room-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+/*Styles each room picture*/
+.room-card img{
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/*Adds spacing around details*/
+.room-info{
+    padding: 25px;
+}
+
+.room-info h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.room-info p{
+    margin-bottom: 15px;
+    color: #555555;
+}
+
+/*Highlights the room price*/
+.room-info .room-price{
+    color: #a87900;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.room-price span{
+    color: #666666;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/*HOTEL FACILITIES*/
+.facilities-section{
+    background-color: #f7f8fa;
+}
+
+.facilities-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 20px;
+}
+
+.facility-card{
+    background-color: #ffffff;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.17);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.facility-card:hover{
+    background-color: #263238;
+    color: #ffffff;
+}
+
+/*9. BOOKING SECTION*/
+.booking-section{
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+}
+
+.booking-section h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.booking-section p{
+    margin-bottom: 25px;
+}
+
+/*10. FOOTER*/
+
+.hotel-footer{
+    background-color: #172126;
+    color: #ffffff;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.hotel-footer a{
+    display: inline-block;
+    color: #d4a017;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.hotel-footer a:hover{
+    text-decoration: underline;
+}
+
+/*11. ANIMATION*/
+
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*12. MOBILE RESPONSIVENESS*/
+@media (max-width: 768px){
+    .hotel-header .hotel-container{
+        flex-direction: column;
+    }
+
+    .hotel-nav{
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hotel-hero{
+        min-height: 380px;
+    }
+
+    .room-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .facilities-grid{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .hotel-section-heading h2{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 450px){
+    .hotel-nav{
+        gap: 10px;
+    }
+
+    .hotel-nav a{
+        font-size: 14px;
+
+    }
+
+    .facilities-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .room-info{
+        padding: 18px;
+    }
+}
+
+/*Respects visitors who prefer reduced motion*/
+@media(prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.1ms !important
+    }
+}
+
+
+/*HOTEL RESPONSIVE TOGGLE MENU*/
+/*position the navigation*/
+.stay-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*hide the checkbox*/
+#stay-menu-toggle{
+    display: none;
+}
+
+/*desktop navigation links*/
+.stay-menu-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navigation link appearance*/
+.stay-menu-links a{
+    display: block;
+    text-decoration: none;
+    color: #263238;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*link hover effect*/
+.stay-menu-links a:hover{
+    color: #d4a017;
+}
+
+/*hide the three-line button on desktop*/
+.stay-menu-button{
+    display: none;
+    cursor: pointer;
+}
+
+/*draw the three lines*/
+.stay-menu-button span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: #263238;
+    border-radius: 3px;
+}
+
+/*MOBILE MENUI*/
+@media screen and (max-width: 768px){
+    .stay-menu{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    /*show the three-line button*/
+    .stay-menu-button{
+        display: block;
+        padding: 8px;
+    }
+
+    /*hide links until clicked*/
+    .stay-menu-links{
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        margin: 0;
+        padding: 8px 0;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+    }
+
+    /*sho link when the menu is clicked*/
+    #stay-menu-toggle:checked ~ .stay-menu-links{
+        display: flex;
+    }
+
+    /*make link easy to tap*/
+    .stay-menu-links li{
+        width: 100%;
+    }
+
+    .stay-menu-links a{
+        padding: 14px 18px;
+        color: #263238;
+    }
+
+    .stay-menu-links a:hover{
+        background-color: #f2f2f2;
+    }
+}

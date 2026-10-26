@@ -1,0 +1,642 @@
+/*1. GENERAL SETTING: This setting apply across the homepage*/
+
+/*Removes default browser spacing and makes sizing easier to manage*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Styles the entire webpage*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #ffffff;
+}
+
+/*Makes the image fit inside their containers*/
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/*Removes the default underline from links*/
+a{
+    text-decoration: none;
+}
+
+/*keeps content centered and prevent it becoming too wide*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Gives section consistent top and bottom spacing*/
+.section-padding{
+    padding: 80px 0;
+}
+
+/*2. HEADER AND NAVIGATION*/
+/*Styles the top navigation area*/
+.header{
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/*Place the logo and navigation side by side*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Stlyle the website name*/
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #12372a;
+}
+
+/*Change the colour of the part of the logo*/
+.logo span{
+    color: #d4a017;
+}
+
+/*  Removes bullets and places navigation links in a row*/
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/*Style each navigation link*/
+.nav-links a{
+    color: #263238;
+    font-size: bold;
+    transition: color 0.3s ease;
+}
+/*Change link colour when mouse moves over it*/
+.nav-links a:hover{
+    color: #d4a017;
+}
+
+/*3. WELCOMR / HERO SECTION*/
+/*Creates a large welcome section with a hotel background*/
+.hero-image{
+    height: 450px;
+    background-image: url(images/hotel1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*WELCOME TEXT IN SEPARATE SECTION*/
+.welcome-section{
+    background-color: #f8f5f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.welcome-content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-content .welcome-text{
+    color: #b8860b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.welcome-content h1{
+    color: #263238;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.welcome-content p:not(.welcome-text){
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: backbround-color 0.3s ease;
+}
+
+.welcome-content .bnt:hover{
+    background-color: #a87908;
+}
+
+.welcome-content .btn{
+    display: inline-block;
+    background-color: #d4a017;
+    color: white;
+    padding: 14px 28px;
+}
+
+
+/*Keeps the welcome text from becoming too wide*/
+.hero-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/*Style the small welcome text*/
+.welcome-text{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/*Style the large welcome heading*/
+.hero h1{
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/*Style the welcome paragraph*/
+.hero-content > p:not(.welcome-text){
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*4. BUTTON DESIGN*/
+/*Gives the button a consistent appearance*/
+.bnt{
+    display: inline-block;
+    background-color: #d4a017;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; transform: 0.3s ease;
+}
+
+/*Change the button colour when mouse moves over it*/
+.bnt:hover{
+    background-color: #12372a;
+    transform: translateY(-2px);
+}
+
+/*5. SECTION HEADINGS*/
+
+.section-heading{
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+/*Small gold heading above each main heading*/
+.subtitle{
+    color: #b8860b;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/*Main heading inside a section*/
+.section-heading h2,
+.about h2{
+    font-size: 34px;
+    color: #12372a;
+    margin-bottom: 12px;
+}
+
+/*Paragraph under a section heading*/
+.section-heading > p:last-child{
+    color: #65716d;
+}
+
+/*6. HOTEL CARDS AND GRIDS*/
+/*Creates a responsive grid for the hotel cards*/
+.hotel-grid{
+    display: grid;
+
+    /*creates as many columns as willcomfortably fit*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/*Styles each individual hotel card*/
+.hotel-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease; box-shadow: 0.3s ease;
+}
+
+/*lifts the card slightly when the mouse moves over it*/
+.hotel-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+}
+
+/*Gives every hotel picture the same height*/
+.hotel-card > img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/*Adds space around the information inside a card*/
+.hotel-info{
+    padding: 22px;
+}
+
+/* Styles the small label above each hotels name*/
+.htel-label{
+    display: inline-block;
+    color: #b8860b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/*Styles hotel names*/
+.hotel-info h3{
+    color: #12372a;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+/*Styles the hotel descriptions*/
+.hotel-info > p:not(.price){
+    color: #65716d;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/*Styles the hotel price*/
+.hotel-info .location{
+    font-size: 13px;
+}
+
+/*Styles the hotel price*/
+.hotel-info .price{
+    color: #12372a;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/*Makes the period smaller*/
+.price span{
+    font-size: 13px;
+    color: #65716d;
+    font-weight: normal;
+}
+
+/*Makes the card button span the card width*/
+.hotel-info .btn{
+    display: block;
+    text-align: center;
+}
+
+/*7. ABOUT SECTION*/
+.about-content{
+    background-color: #f4f7f4;
+}
+
+/*Keeps the About section text centered and readable*/
+.about-content{
+    max-width: 800px;
+    text-align: center;
+}
+
+/*Styles the paragraphs inside the About Section*/
+.about-content p:not(.subtitle){
+    color: #65716d;
+    margin-bottom: 18px;
+}
+
+/*8. BOOKING FORM*/
+/*Gives the booking section a light background*/
+.booking{
+    background-color: #ffffff;
+}
+
+/*Creates a neat form layout*/
+.booking-form{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f4f7f4;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/*Groups each label with its input*/
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*Styles form label*/
+.form-group label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*Styles text field, date and dropdowns*/
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d8d2;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font: inherit;
+}
+
+/*Highlights a field when someone selects it*/
+.form-group input:focus,
+.form-group select:focus{
+    outline: 2px solid #d4a017;
+    border-color: #d4a017;
+}
+
+/*Makes the submit button fill the form width*/
+.booking-form > .btn{
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+/*Styles the note about the demonstration*/
+.forn-note{
+    grid-column: 1 / -1;
+    font-size: 13px;
+    color: #65716d;
+    text-align: center;
+}
+
+/*CONTACT SECTION*/
+.contact{
+    background-color: #f4f7f4;
+}
+
+/*Styles the contact information box*/
+.cotact-box{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/*Adds space between contact details*/
+.contact-box p{
+    margin-bottom: 12px;
+}
+
+/*Colours the contact email link*/
+.contact-box a{
+    color: #b8860b;
+}
+
+/*10.FOOTER*/
+.footer{
+    background-color: #12372a;
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer p{
+    font-size: 14px;
+}
+
+/*11. MOBILE RESPONSIVNESS: These rules apply on smaller screens*/
+@media (max-width: 768px) {
+
+    /*Stacks the logo and navigation vertically*/
+    .navbar{
+        flex-direction: column;
+    }
+
+    /*Allows navigation links to wrap onto new lines*/
+.nav-links{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+}
+
+/*Reduces the hero height on smaller screen*/
+.hero{
+    min-height: 450px;
+}
+
+/*Reduces section spacing*/
+.section-padding{
+    padding: 55px 0;
+}
+
+/*Reduces section heading size*/
+.section-heading h2,
+.about h2{
+    font-size: 28px;
+}
+
+/*Changes the form to one column*/
+.booking-form{
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+/*Keeps the form button and note in the single column*/
+.booking-form > .btn,
+.form-note{
+    grid-column: auto;
+}
+
+}
+
+@media (max-width: 400px) {
+    /*Makes the navigation links slightly smaller*/
+    .nav-links{
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    /*Reduces the logo size*/
+    .logo{
+        font-size: 24px;
+    }
+
+    /*Reduces the card padding*/
+    .hotel-info{
+        padding: 18px;
+    }
+}
+
+/*ADJUST THE LAYOUT FOR SMALL SCREENS*/
+@media(max-width: 600px) {
+    .hero-image{
+        height: 280px;
+    }
+
+    .welcome-content h1{
+        font-size: 30px;
+    }
+
+    .welcome-section{
+        padding: 35px 15px;
+    }
+}
+
+/*1. Animate the welcome content when the page loads*/
+.welcome-content{
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/*2. Define the fade-in and upward movement*/
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*3. Add a gentle zoom animation to the hero image*/
+.hero-image{
+    animation: zoomImage 12s ease-in-out infinite alternate;
+}
+
+/*4. Define the image zook effect*/
+@keyframes zoomImage{
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 110%;
+    }
+}
+
+/*Animate the explore Hotel button on haver*/
+.welcome-content .btn{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.welcome-content .bnt:hover{
+    transform: translateY(-5px);
+    background-color: #b8860b;
+}
+
+/*6. Respect visitors who prefer reduced motion*/
+@media (prefers-reduced-motion: reduce){
+    .welcome-content,
+    .hero-image{
+        animation: none;
+    }
+
+    .welcome-content .btn{
+        transition: none;
+    }
+}
+
+/*RESPONSIVE TOGGLE MENU*/
+/*hide the checkbox*/
+#menu-toggle{
+    display: none;
+}
+
+/*hide the three lines on desktop*/
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+/*styles the three lines*/
+.menu-icon span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #263238;
+    margin: 6px 0;
+    border-radius: 3px;
+}
+
+/*destop navigation*/
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/*Mobile screen*/
+@media screen and (max-width: 768px) {
+    /*show the three-line menu*/
+    .menu-icon{
+        display: block;
+    }
+
+    /*hide links by default*/
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 10px 0;
+        margin: 0;
+        background-color: white;
+        box-shadow: 0, 5px 10px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    }
+
+    /*show links when the meni is clicked*/
+    #menu-toggle:checked ~ .nav-links{
+        display: flex;
+    }
+
+    /*styles each link*/
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links a{
+        display: block;
+        padding: 12px 20px;
+        text-decoration: none;
+        color: #263238;
+    }
+
+    .nav-links a:hover{
+        background-color: #f0f0f0;
+    }
+}

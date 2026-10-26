@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayEnugu - Hotel Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--HEADER AND NAVIGATION-->
+    <header class="header">
+        <div class="container navbar">
+
+            <!--Website logo/name-->
+            <a href="index.html" class="logo">Stay<span>Enugu</span></a>
+
+            <!--Navigation link-->
+            <nav class="navbar">
+                <!--Toggle checkbox controls the menu-->
+                <input type="checkbox" id="menu-toggle">
+                <!--Three-line menu button-->
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!--Navigation Links-->
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#hotels">Hotels</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#booking">Book a Room</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--WELCOME / HERO SECTION-->
+    <main>
+        <!--HOME BACKGROUND IMAGE-->
+        <section class="hero-image" id="home"></section>
+        <!--SEPARATE WELCOME TEXT-->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <p class="welcome-text">WELCOME TO ENUGU</p>
+
+                <h1>Find Your Perfect Stay</h1>
+
+                <p>Discover comfortable hotel, beautiful rooms, and a welcoming hospitality in the heart of Enugu.</p>
+
+                <!--Takes visitors down to the hotel list-->
+                <a href="#hotels" class="btn">Explore Hotels</a>
+            </div>
+        </section>
+        
+
+
+        <!--HOTELS SECTION-->
+        <section class="hotels section-padding" id="hotels">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="subtitle">OUR COLLECTION</p>
+                    <h2>Explore Our Hotels</h2>
+                    <p>Choose a hotel that suits your comfort and budget.</p>
+                </div>
+
+                <!--Holds all five hotel cards-->
+                <div class="hotel-grid">
+
+                    <!--HOTEL 1-->
+                    <article class="hotel-card">
+                        <img src="images/hotel 1.jpg"
+                             alt="Exterior view of Hotel 1">
+                        <div class="hotel-info">
+                            <span class="hotel-label">COMFORT & LUXURY</span>
+
+                            <h3>Carlton Swiss Grand Hotels</h3>
+                            <p>Enjoy a relaxing stay with comfortable rooms and a welcoming atmosphere</p>
+                            <p class="location">47 Nza Street, Independence Layout, Enugu, EN, 400102</p>
+
+                            <!--Shows the starting price for this hotel-->
+                            <p class="price">From &#8358;55,000 <span>/ night</span></p>
+
+                            <!--Shows some available room types-->
+                            <p class="room-summary">Standard | Deluxe | Executive | Presidential</p>
+                            <a href="hotel 1/index.html" class="btn">View Hotel</a>
+                        </div>
+                    </article>
+
+
+                    <!--HOTEL 2-->
+                    <article class="hotel-card">
+                        <img src="images/hotel 2.jpg"
+                             alt="Exterior view of the Hotel 2">
+                        <div class="hotel-info">
+                            <span class="hotel-label">RELAX & UNWING</span>
+
+                            <h3>Hotel Presidential By Amber</h3>
+                            <p>A Welcoming place for visitors looking for comfort and convenience</p>
+                            <p class="location">80 Presidential Road, Independence Layout, Enugu State, Nigeria</p>
+                            <p class="price">From &#8358;120,000 <span>/ night</span></p>
+                            <p class="room-summary">Standard | Deluxe | Executive | Presidential</p>
+                            <a href="hotel 2/index.html" class="btn">View Hotel</a>
+                        </div>
+                    </article>
+
+                    <!--HOTEL 3-->
+                    <article class="hotel-card">
+                        <img src="images/hotel 3.jpg"
+                             alt="Exterior view of the Hotel 3">
+                        <div class="hotel-info">
+                            <span class="hotel-label">MODERN LIVING</span>
+                            <h3>The Andover Hotel</h3>
+                            <p>Experience a modern atmosphere designed for relaxation and enjoyable stays</p>
+                            <p class="location">23 Vosan Drive, off Achi Street, Independence Layout, Enugu, Nigeria</p>
+                            <p class="price">From &#8358;80,000 <span>/ night</span></p>
+                            <p class="room-summary">Standard | Deluxe | Executive | Presidential</p>
+                            <a href="hotel 3/index.html" class="btn">View Hotel</a>
+                        </div>
+                    </article>
+                    
+                    <!--HOTEL 4-->
+                    <article class="hotel-card">
+                        <img src="images/hotel 4.jpg"
+                             alt="Exterior view of the Hotel 4">
+                        <div class="hotel-info">
+                            <span class="hotel-label">PEACE & COMFORT</span>
+                            <h3>BON Hotel Platinum</h3>
+                            <p>Find a peaceful place to rest during your visit to Enugu</p>
+                            <p class="location">15 Traditional Avenue, Independence Layout, Enugu, Nigeria</p>
+                            <p class="price">From &#8358;44,000 <span>/ night</span></p>
+                            <p class="room-summary">Standard | Deluxe | Executive | Presidential</p>
+                            <a href="hotel 4/index.html" class="btn">View Hotel</a>
+                        </div>
+                    </article>
+
+                    <!--HOTEL 5-->
+                    <article class="hotel-card">
+                        <img src="images/hotel 5.jpg"
+                             alt="Exterior view of the Hotel 5">
+                        <div class="hotel-info">
+                            <span class="hotel-label">ELEGANCE & STYLE</span>
+                            <h3>Santorini Exclusive Hotel</h3>
+                            <p>A simple and comfortable optionfor travellers exploring Enugu</p>
+                            <p class="location">83 Nza St, Independence Layout, Enugu 400102, Enugu</p>
+                            <p class="price">From &#8358;70,000 <span>/ night</span></p>
+                            <p class="room-summary">Standard | Deluxe | Executive | Presidential</p>
+                            <a href="hotel 5/index.html" class="btn">View Hotel</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--ABOUT SECTION-->
+        <section class="about section-padding" id="about">
+            <div class="container about-content">
+                <div>
+                    <p class="subtitle">ABOUT STAYENUGU</p>
+                    <h2>Making Your Stay in Enugu Easier and More Comfortable</h2>
+                    <p>StayEnugu is a hotel discovery and booking website created to help visitors explore accomodation options in Enugu</p>
+                    <p>Compare the available options, learn about each hotel, and find accomodation that suits your needs.</p>
+                    <a href="booking" class="btn">Plan Your Stay</a>
+                </div>
+            </div>
+        </section>
+
+        <!--BOOKING SECTION-->
+        <section class="booking section-padding" id="booking">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="subtitle">RESERVE YOUR STAY</p>
+                    <h2>Booking Enquiry</h2>
+                    <p>Enter your details to prepare your booking enquiry.</p>
+                </div>
+                <form class="booking-form" action="#" method="get">
+
+                    <!--Visitors name-->
+                    <div class="form-group">
+                        <label for="guest-name">Full Name</label>
+                        <input type="text"
+                                 id="guest-name"
+                                 name="guest-name"
+                                 placeholder="Enter your full name"
+                                 required>
+                    </div>
+
+                    <!--Visitors email-->
+                    <div class="form-group">
+                        <label for="guest-email">Email Address</label>
+                        <input type="email"
+                                 id="guest-email"
+                                 name="guest-email"
+                                 placeholder="Enter your email address"
+                                 required>
+                    </div>
+
+                    <!--Visitors chooses a hotel-->
+                    <div class="form-group">
+                        <label for="hotel-choice">Choose a Hotel</label>
+                        <select id="hotel-choice" name="hotel" required>
+                            <option value="">Select a hotel</option>
+                            <option value="hotel1">Carlton Swiss Grand Hotels</option>
+                            <option value="hotel2">Hotel Presidential By Amber</option>
+                            <option value="hotel3">The Andover Hotel</option>
+                            <option value="hotel4">BON Hotel Platinum</option>
+                            <option value="hotel5">Santorini Exclusive Hotel</option>
+                        </select>
+                    </div>
+
+                    <!--Check-in date-->
+                    <div class="form-group">
+                        <label for="check-in">Check-in Date</label>
+                        <input type="date"
+                                id="check-in"
+                                name="check-in"
+                                required>
+                    </div>
+
+                    <!--Check-out date-->
+                    <div class="form-group">
+                        <label for="check-out">Check-out Date</label>
+                        <input type="date"
+                                id="check-out"
+                                name="check-out"
+                                required>
+                    </div>
+
+                    <!--Number of guests-->
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number"
+                                id="guests"
+                                name="guests"
+                                min="1"
+                                max="2"
+                                placeholder="Enter number of guests"
+                                required>
+                    </div>
+
+                    <!--Submit the form-->
+                    <button type="submit" class="bnt">
+                        Submit Booking Enquiry
+                    </button>
+                    <p class="form-note">Demonstration form: submission are not saved or sent to a hotel yet.</p>
+                </form>
+            </div>
+        </section>
+
+        <!--CONTACT SECTION-->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div clsss="section-heading">
+                    <p class="subtitle">GET IN TOUCH</p>
+                    <h2>Contact Us</h2>
+                    <p>Have questions or need assistance about your stay? We're here to help!</p>
+                </div>
+
+                <div class="contact-box">
+                    <p><strong>Website:</strong> www.enugu-hotel.com</p>
+                    <p><strong>Location:</strong> Enugu State, Nigeria</p>
+                    <p><strong>Email:</strong>
+                        <a href="mailto:enuguhotelbooking@gmail.com">enuguhotelbooking@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER SECTION-->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 StayEnugu. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
